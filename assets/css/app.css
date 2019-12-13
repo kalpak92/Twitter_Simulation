@@ -1,0 +1,317 @@
+:root {
+  --input-padding-x: 1.5rem;
+  --input-padding-y: .75rem;
+}
+
+body {
+  background: #007bff;
+  background: linear-gradient(to right, #0062E6, #33AEFF);
+}
+
+.card-signin {
+  border: 0;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-signin .card-title {
+  margin-bottom: 2rem;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.card-signin .card-body {
+  padding: 2rem;
+}
+
+.form-signin {
+  width: 100%;
+}
+
+.form-signin .btn {
+  font-size: 80%;
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 1rem;
+  transition: all 0.2s;
+}
+
+.form-label-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-label-group input {
+  height: auto;
+  border-radius: 2rem;
+}
+
+.form-label-group>input,
+.form-label-group>label {
+  padding: var(--input-padding-y) var(--input-padding-x);
+}
+
+.form-label-group>label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  /* Override default `<label>` margin */
+  line-height: 1.5;
+  color: #495057;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  transition: all .1s ease-in-out;
+}
+
+.form-label-group input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-moz-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::placeholder {
+  color: transparent;
+}
+
+.form-label-group input:not(:placeholder-shown) {
+  padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+  padding-bottom: calc(var(--input-padding-y) / 3);
+}
+
+.form-label-group input:not(:placeholder-shown)~label {
+  padding-top: calc(var(--input-padding-y) / 3);
+  padding-bottom: calc(var(--input-padding-y) / 3);
+  font-size: 12px;
+  color: #777;
+}
+
+.btn-google {
+  color: white;
+  background-color: #ea4335;
+}
+
+.btn-facebook {
+  color: white;
+  background-color: #3b5998;
+}
+
+/* Fallback for Edge
+-------------------------------------------------- */
+
+@supports (-ms-ime-align: auto) {
+  .form-label-group>label {
+    display: none;
+  }
+  .form-label-group input::-ms-input-placeholder {
+    color: #777;
+  }
+}
+
+/* Fallback for IE
+-------------------------------------------------- */
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+  .form-label-group>label {
+    display: none;
+  }
+  .form-label-group input:-ms-input-placeholder {
+    color: #777;
+  }
+}
+
+/* This file is for your main application css. */
+ #tweet-list {
+  border: 1px solid #777;
+  height: 200px;
+  width: 500px;
+  padding: 10px;
+  overflow: scroll; 
+  margin-bottom: 50px;
+  text-align: left;
+} 
+
+#tweets {
+  background: #55ACEE;
+  /* color: white; */
+
+}
+
+.font1{
+  font-weight: 900;
+  color:white;
+}
+.font2{
+  font-weight: 600;
+  color:rgb(68, 64, 64);
+}
+
+.mentionshashtagspart1{
+  background: #55ACEE;
+  }
+
+#unlog {
+  text-align: center;
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: red;
+} 
+
+.mentions-list {
+  /* border: 1px solid #777; */
+  border: 5px solid rgb(216, 208, 208);
+  border-style: ridge;
+  height: 100px;
+  width: 405px;
+  padding: 5px;
+  overflow: scroll; 
+  margin-bottom: 15px;
+  display: inline-block; 
+  vertical-align:justify;
+  margin: 0 auto;
+  background-color:white;
+} 
+
+
+/* .boxSub{
+  display: inline-block; 
+  height: 92px;
+  width: 405px;
+  padding: 5px;
+  vertical-align:justify;
+  margin: 0 auto
+  
+  
+} */
+
+#button-retweet {
+  border: 1px solid #777;
+  height: 30px;
+  padding: 5px;
+  text-align: justify;
+  margin-bottom: 50px;
+}
+#tdright {
+  
+  text-align: top;
+  width: 100px;
+  
+}
+
+.signupPart {
+  border: 1px solid green;
+  border-style: ridge;
+  /* height: 30px; */
+  padding: 5px;
+  text-align: justify;
+  margin-bottom: 50px;
+  margin: 0 auto;
+  width: 400px;
+  font: 'Times New Roman';
+  background-color: rgba(58, 71, 146, 0.301);
+}
+
+.dash{
+  /* border: 1px solid green; */
+  border-style: ridge;
+  margin: 0 auto;
+  padding: 5px;
+  text-align: justify;
+  width: 830px
+
+}
+
+.box {
+  display: inline-block; 
+  /* width: 300px; */
+  margin-left: 10px;
+  margin-top: 0px;
+  padding: 5px;
+  /* vertical-align:justify; */
+  margin: 0 auto
+}
+
+.qtwitter
+{
+  background: rgb(30, 104, 165);
+  color: white;
+}
+
+.box1{
+  display: inline-block; 
+  width: 300px;
+  margin-left: 10px;
+  margin-top: 10px; 
+  padding: 5px;
+  vertical-align:justify;
+  margin: 0 auto 
+  
+}
+.box2{
+  display: inline-block; 
+  /* width: 300px;
+  margin-left: 10px;
+  margin-top: 10px; */
+  padding: 5px;
+  vertical-align:justify;
+  margin: 0 auto
+  
+  
+}
+
+#signupPart {
+  border: 1px solid #777;
+  /* height: 30px; */
+  padding: 5px;
+  text-align: justify;
+  margin-bottom: 50px;
+}
+
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 70%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.bgimg {
+  background-image: url('../images/twitter.png');
+  /* background: #3B5998; */
+  width: 117%
+}
