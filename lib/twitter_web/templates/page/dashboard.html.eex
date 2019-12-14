@@ -1,9 +1,12 @@
 <div class ="body_cust" style = "width:100%">
+    <div align="left">
+					<a href="http://localhost:4000/" id="btnLogOut" style="text-align:right">Log Out</a> 
+	</div>
 
     <div class="box-db">
         <h1 style = "text-align: center;">Post a Tweet</h1>
 
-        <input id="tweetContent" type="text" name="email" value="tweet" class="email" />
+        <input id="tweetContent" type="text" name="email" class="email" />
 
         <a href="#"><div id="btnTweet" class="btn" style="
                         padding-left: 7px;
@@ -32,8 +35,7 @@
     <div class="box-db-long">
         <h2 style="text-align: center;margin-bottom: 72px;">Subscribe</h2>
 
-        <input id="username2" type="text" name="email" value="userid"
-        class="email-long" />
+        <input id="username2" type="text" name="email" class="email-long" />
         <a href="#"><div id="btnFollow" class="btn" style="
                                 padding-left: 7px;
                                 width: 76%;
@@ -66,8 +68,7 @@
     <div class="box-db-long">
         <h2 style="text-align: center;margin-bottom: 72px;">Search by Hashtag</h2>
 
-        <input id="hashtag" type="text" name="email" value="#hashtag"
-        class="email-long" />
+        <input id="hashtag" type="text" name="email" class="email-long" />
         <div id= "hashtagArea" class='row' style="background: white;">
                                    My News Feed!
                  </div>

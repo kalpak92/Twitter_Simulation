@@ -353,10 +353,10 @@ body {
   }
 
 #unlog {
-  text-align: center;
+  text-align: left;
   font-size: 10px;
   font-family: Arial, Helvetica, sans-serif;
-  color: red;
+  /* color: red; */
 } 
 
 .mentions-list {
