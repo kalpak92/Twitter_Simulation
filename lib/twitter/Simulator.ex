@@ -26,9 +26,67 @@ defmodule Simulator do
 
   def setupStaticData(total, mapOfSockets) do
       :ets.new(:staticFields, [:named_table])
+
       :ets.insert(:staticFields, {"totalNodes", total})
-      :ets.insert(:staticFields, {"sampleTweets", ["Please come to my party. ","Don't you dare come to my party. ","Why won't you invite me to your party? ","But I wanna come to your party. ","Okay I won't come to your party. "]})
-      :ets.insert(:staticFields, {"hashTags", ["#adoptdontshop ","#UFisGreat ","#Fall2017 ","#DinnerParty ","#cutenesscatified "]})
+
+      :ets.insert(
+          :staticFields,
+          {"sampleTweets", [
+            "i love my new Macbook",
+            "My Purdue Cal friends are awesome",
+            "i liked MIT though esp their little info book",
+            "Desperate times, Desperate measures",
+            "Catch me if u can",
+            "Now you See Me",
+            "Ocean 13",
+            "I think Angelina Jolie is so much more beautiful than Jennifer Anniston who by the way is majorly OVERRATED",
+            "Call me by your name",
+            "Who let the Dog's out ... ",
+            "Ideas are Bulletproof",
+            "Hello Friends, Chai pee lo",
+            "Mithun Daaaaaaaaaaaa, Baapi Daaaaaa",
+            "Mota Bhaaaai",
+            "Toh Kaar naaa",
+            "This is Anton. Son of Anton. ",
+            "Son of Sardar",
+            "The name's Bond. James Bond."
+        ]})
+      :ets.insert(
+          :staticFields,
+          {"hashTags", [
+            "#sample ",
+            "#hiphop ",
+            "#rap ",
+            "#beats ",
+            "#producer ",
+            "#music ",
+            "#samp ",
+            "#sampling ",
+            "#iphone ",
+            "#beatmaker ",
+            "#beat ",
+            "#instrumental ",
+            "#trap ",
+            "#freestuff ",
+            "#rnb ",
+            "#flstudio ",
+            "#samsunggalaxys ",
+            "#love ",
+            "#beatmaking ",
+            "#contactinfo ",
+            "#whatsapp ",
+            "#cellphonewholesale ",
+            "#free ",
+            "#samples ",
+            "#wholesale ",
+            "#boombap ",
+            "#drums ",
+            "#happy ",
+            "#sampi ",
+            "#bhfyp "
+        ]})
+
+
       :ets.insert(:staticFields, {"mapOfSockets", mapOfSockets})
   end
 
@@ -38,7 +96,6 @@ defmodule Simulator do
           {:ok, _, socket} = subscribe_and_join(socket, "lobby", %{})
 
           payload = %{username: "user" <> Integer.to_string(client), password: "123"}
-          # socket.connect()
 
           push socket, "register_account", payload
           push socket, "login", payload
@@ -135,9 +192,7 @@ defmodule Simulator do
   def generateMultipleTweets(username, socket, delay) do
               # get the tweet content.
               content = Simulator.getTweetContent(username)
-              # IO.inspect content
               payload = %{tweetText: content , username: username}
-              #GenServer.cast(String.to_atom(username),{:tweet, content})
               push socket, "tweet", payload
               Process.sleep(delay)
               generateMultipleTweets(username, socket, delay)
@@ -154,8 +209,6 @@ defmodule Simulator do
   end
 
   def assignfollowers(numClients, mapOfSockets) do
-      # calculate cons somehow
-      # [{_, mapOfSockets}] = :ets.lookup(:staticFields, "mapOfSockets")
 
       harmonicList = for j <- 1..numClients do
                        round(1/j)
@@ -178,7 +231,7 @@ defmodule Simulator do
   end
 
 
-  def getTweetContent(username) do
+  def getTweetContent(_username) do
       [{_, sampleTweets}] = :ets.lookup(:staticFields, "sampleTweets")
       rand_Index = Enum.random(1..Enum.count(sampleTweets))
       selectedTweet = Enum.at(sampleTweets, rand_Index - 1)
